@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.scorekeeper.MainActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hockey_player" />
+
+        <LinearLayout
+            android:id="@+id/main_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="25dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/team_a_name"
+                    style="@style/EditTextStyle"
+                    android:hint="@string/team_A" />
+
+                <TextView
+                    android:id="@+id/team_a_score"
+                    style="@style/ScoreTextStyle"
+                    android:text="@string/default_value" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/team_a_total_shots"
+                        style="@style/OtherStatsTextStyle"
+                        android:paddingLeft="30dp"
+                        android:text="@string/default_value" />
+
+                    <TextView
+                        android:id="@+id/team_a_total_penalty_minutes"
+                        style="@style/OtherStatsTextStyle"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="30dp"
+                        android:text="@string/default_value"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="goalTeamA"
+                    android:text="@string/button_goal" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="shotTeamA"
+                    android:text="@string/button_shot" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_weight="1"
+                        android:onClick="twoPenaltyMinutesTeamA"
+                        android:text="@string/button_two" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_weight="1"
+                        android:onClick="fivePenaltyMinutesTeamA"
+                        android:text="@string/button_five" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/team_b_name"
+                    style="@style/EditTextStyle"
+                    android:hint="@string/team_B" />
+
+                <TextView
+                    android:id="@+id/team_b_score"
+                    style="@style/ScoreTextStyle"
+                    android:freezesText="true"
+                    android:text="@string/default_value" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/team_b_total_shots"
+                        style="@style/OtherStatsTextStyle"
+                        android:paddingLeft="30dp"
+                        android:text="@string/default_value" />
+
+                    <TextView
+                        android:id="@+id/team_b_total_penalty_minutes"
+                        style="@style/OtherStatsTextStyle"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="30dp"
+                        android:text="@string/default_value"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="goalTeamB"
+                    android:text="@string/button_goal" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:onClick="shotTeamB"
+                    android:text="@string/button_shot" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_weight="1"
+                        android:onClick="twoPenaltyMinutesTeamB"
+                        android:text="@string/button_two" />
+
+                    <Button
+                        style="@style/ButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="26dp"
+                        android:layout_weight="1"
+                        android:onClick="fivePenaltyMinutesTeamB"
+                        android:text="@string/button_five" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reset"
+            style="@style/ButtonStyle"
+            android:layout_width="120dp"
+            android:layout_below="@id/main_view"
+            android:layout_centerHorizontal="true"
+            android:onClick="resetAll"
+            android:text="@string/button_reset" />
+
+    </RelativeLayout>
+</ScrollView>

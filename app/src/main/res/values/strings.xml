@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="team_A">HOME</string>
+    <string name="team_B">AWAY</string>
+    <string name="button_goal">GOAL</string>
+    <string name="button_shot">SHOT</string>
+    <string name="default_value">0</string>
+    <string name="button_two">2</string>
+    <string name="button_five">5</string>
+    <string name="button_reset">reset</string>
+
+</resources>
